@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require("path");
 const app = express();
 
 const PORT = 8080;
@@ -16,14 +17,23 @@ const startServer = async () => {
 }
 startServer();
 
-app.use(express.static(__dirname + '/public'));
-// middleware
+// body parsing middleware
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 
-// routes
+// static middleware
+app.use(express.static(__dirname + '/public'));
 
-// localhost
-app.get('/', (req, res) => {
-    res.send("Hello :)");
+app.use('/api', require('./api'));
+
+app.get('*', (req, res, next) => {
+  res.sendFile('./public/index.html', { root: __dirname });
 });
+
+// error handling middleware
+app.use((err, req, res, next) => {
+  if (process.env.NODE_ENV !== 'test') console.error(err.stack);
+  res.status(err.status || 500).send(err.message || 'Internal server error');
+});
+
+module.exports = app;
