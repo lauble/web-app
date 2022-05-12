@@ -4,7 +4,10 @@
   "description": "Boilerplate for a simple web application",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server/index.js"
+    "start": "nodemon server/index.js",
+    "seed": "node server/db/seed.js",
+    "build": "webpack",
+    "build-watch": "webpack -w"
   },
   "author": "Lauren",
   "license": "ISC",
@@ -14,6 +17,11 @@
     "sequelize": "^6.19.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.16"
+    "@babel/core": "^7.11.4",
+    "@babel/preset-react": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "nodemon": "^2.0.15",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
   }
 }
