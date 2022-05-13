@@ -7,11 +7,11 @@ const Routes = () => {
     <Router>
       <div>
         <nav>
-          Welcome!
-          <Link to="/">Home</Link>
+          Links: This is where nav links can go
+          {/* <Link to="/">Home</Link> */}
         </nav>
         <main>
-          <h1 style={{ textAlign: 'center' }}>Welcome!</h1>
+          <h1 style={{ textAlign: 'center' }}>Welcome to the Home Page!</h1>
           {/* <Route exact path="/" component={Home} /> */}
         </main>
       </div>
