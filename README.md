@@ -12,6 +12,7 @@
 To run on your local machine:
 ```
 npm install
+npm run build
 npm start
 ```
 This project is set up to run on local host port 8080. You can change the port number in the following file:
