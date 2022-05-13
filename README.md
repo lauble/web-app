@@ -1,4 +1,11 @@
 # Web Application Template with React
+:black_small_square: PostgreSQL
+:black_small_square: Express
+:black_small_square: React
+:black_small_square: Sequelize
+:black_small_square: Axios
+:black_small_square: Webpack
+:black_small_square: Nodemon
 
 ## :small_orange_diamond: Getting Started
 
