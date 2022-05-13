@@ -1,6 +1,6 @@
 # Web Application Template with React
 
-## Getting Started
+## :small_orange_diamond: Getting Started
 
 To run on your local machine:
 ```
@@ -13,11 +13,11 @@ server/index.js
 const PORT = 8080
 ```
 
-## Scripts
+## :small_orange_diamond: Scripts
 
-| command             | description                                                         |
-|-------------------- |-------------------------------------------------------------------- |
-| npm run seed        | runs seed file                                                      |
-| npm run build       | runs webpack / builds bundle.js                                     |
-| npm run build-watch | runs webpack and watches files / recompiles whenever they change    |
+| command                                  | description                                                         |
+|----------------------------------------- | --------------------------------------------------------------------|
+| :small_red_triangle: npm run seed        | runs seed file                                                      |
+| :small_red_triangle: npm run build       | runs webpack / builds bundle.js                                     |
+| :small_red_triangle: npm run build-watch | runs webpack and watches files / recompiles whenever they change    |
 
