@@ -1,20 +1,19 @@
-const express = require("express");
-const path = require("path");
+const express = require('express');
 const app = express();
 
 const PORT = 8080;
-const { db } = require("./db");
+const { db } = require('./db');
 
 const startServer = async () => {
-    try {
-       await db.sync();
-       app.listen(PORT, () => {
-           console.log(`Server is running on port ${PORT}!~`);
-       });
-    } catch (error) {
-        console.error(error);
-    }
-}
+  try {
+    await db.sync();
+    app.listen(PORT, () => {
+      console.log(`Server is running on port ${PORT}!~`);
+    });
+  } catch (error) {
+    console.error(error);
+  }
+};
 startServer();
 
 // body parsing middleware
@@ -26,7 +25,7 @@ app.use(express.static(__dirname + '/public'));
 
 app.use('/api', require('./api'));
 
-app.get('*', (req, res, next) => {
+app.get('*', (req, res) => {
   res.sendFile('./public/index.html', { root: __dirname });
 });
 
