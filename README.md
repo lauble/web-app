@@ -1,13 +1,13 @@
 # Web Application Template with React
-:black_small_square: PostgreSQL
-:black_small_square: Express
-:black_small_square: React
-:black_small_square: Sequelize
-:black_small_square: Axios
-:black_small_square: Webpack
-:black_small_square: Nodemon
+:white_small_square: PostgreSQL
+:white_small_square: Express 
+:white_small_square: React
+:white_small_square: Node
+:white_small_square: Sequelize
+:white_small_square: Axios
+:white_small_square: Webpack
 
-## :small_orange_diamond: Getting Started
+## :small_blue_diamond: Getting Started
 
 To run on your local machine:
 ```
@@ -20,12 +20,17 @@ This project is set up to run on local host port 8080. You can change the port n
 server/index.js
 const PORT = 8080
 ```
+Create your database in PostgreSQL and update the variable in the following file:
+```
+server/db/db.js
+const dbName = YOUR_DB_NAME
+```
 
-## :small_orange_diamond: Scripts
+## :small_blue_diamond: Scripts
 
-| command                                  | description                                                         |
-|----------------------------------------- | --------------------------------------------------------------------|
-| :small_red_triangle: npm run seed        | runs seed file                                                      |
-| :small_red_triangle: npm run build       | runs webpack / builds bundle.js                                     |
-| :small_red_triangle: npm run build-watch | runs webpack and watches files / recompiles whenever they change    |
+| command                            | description                                                         |
+|------------------------------------| --------------------------------------------------------------------|
+| :radio_button: npm run seed        | runs seed file                                                      |
+| :radio_button: npm run build       | runs webpack / builds bundle.js                                     |
+| :radio_button: npm run build-watch | runs webpack and watches files / recompiles whenever they change    |
 
